@@ -17,9 +17,6 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->string('name', 255);
             $table->string('slug', 255);
-            $table->string('address', 255);
-            $table->string('image', 255);
-            $table->string('email', 255);
             $table->boolean('status');
             $table->timestamps();
         });
