@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBatteriesTable extends Migration
+class CreatePaymentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateBatteriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('batteries', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('battery_capacity');
-            $table->string('battery_type', 255);
-            $table->string('battery_technology', 255);
+            $table->string('name', 255);
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateBatteriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('batteries');
+        Schema::dropIfExists('payments');
     }
 }
