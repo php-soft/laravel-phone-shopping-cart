@@ -15,13 +15,12 @@ class CreateSupportsTable extends Migration
     {
         Schema::create('supports', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('employee_id')->unsigned()->nullable();
-            $table->foreign('employee_id')->references('id')->on('users');
+            $table->integer('customer_id')->unsigned()->nullable();
+            $table->foreign('customer_id')->references('id')->on('users');
             $table->string('name', 255);
             $table->string('email', 255);
             $table->string('phonenumber', 255);
             $table->string('description', 255);
-            $table->integer('vote');
             $table->timestamps();
         });
     }
