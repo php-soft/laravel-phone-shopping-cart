@@ -18,7 +18,7 @@ class CreateMemoriesTable extends Migration
             $table->integer('ram');
             $table->integer('rom');
             $table->integer('available_memory');
-            $table->string('external_memory_cart', 255);
+            $table->string('external_memory_card', 255);
             $table->timestamps();
         });
     }
