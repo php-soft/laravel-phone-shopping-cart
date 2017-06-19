@@ -38,6 +38,63 @@
                             </div>
                         </div>
 
+                        <!-- <div class="form-group{{ $errors->has('phonenumber') ? ' has-error' : '' }}">
+                            <label for="phonenumber" class="col-md-4 control-label">Phone Number</label>
+                        
+                            <div class="col-md-6">
+                                <input id="phonenumber" type="text" class="form-control" name="phonenumber" value="{{ old('phonenumber') }}">
+                        
+                                @if ($errors->has('phonenumber'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('phonenumber') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
+                            <label for="address" class="col-md-4 control-label">Address</label>
+                        
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control" name="address" value="{{ old('address') }}">
+                        
+                                @if ($errors->has('address'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
+                            <label for="image" class="col-md-4 control-label">Image</label>
+                        
+                            <div class="col-md-6">
+                                <input id="image" type="text" class="form-control" name="image" value="{{ old('image') }}">
+                        
+                                @if ($errors->has('image'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('image') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
+                            <label for="status" class="col-md-4 control-label">Status</label>
+                        
+                            <div class="col-md-6">
+                                <input type="radio" name="status" value="1"> True<br>
+                                <input type="radio" name="status" value="0"> False<br>
+                        
+                                @if ($errors->has('status'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('status') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div> -->
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
