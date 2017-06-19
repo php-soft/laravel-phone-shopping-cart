@@ -15,7 +15,10 @@ class CreateMemoriesTable extends Migration
     {
         Schema::create('memories', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 255);
+            $table->integer('ram');
+            $table->integer('rom');
+            $table->integer('available_memory');
+            $table->string('external_memory_card', 255);
             $table->timestamps();
         });
     }
