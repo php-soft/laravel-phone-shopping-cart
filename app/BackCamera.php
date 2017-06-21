@@ -12,11 +12,11 @@ class BackCamera extends Model
 
     public function products()
     {
-    	return $this->hasOne('App\Product');
+     return $this->hasOne('App\Product');
     }
 
     public function product()
     {
-    	return $this->belongsTo('App\Product');
+     return $this->belongsTo('App\Product');
     }
 }
