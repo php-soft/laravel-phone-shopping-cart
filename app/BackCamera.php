@@ -5,10 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Product;
 
-class Front_Camera extends Model
+class BackCamera extends Model
 {
-    protected $table = 'front_cameras';
-    protected $fillable = ['resolution', 'videocall', 'other_info'];
+    protected $table = 'back_cameras';
+    protected $fillable = ['resolution', 'film', 'flash', 'advanced_photography'];
 
     public function products()
     {
