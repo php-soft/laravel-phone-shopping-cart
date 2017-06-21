@@ -8,7 +8,8 @@ use App\Product;
 class Connect extends Model
 {
     protected $table = 'connects';
-    protected $fillable = ['network_mobile', 'sim', 'wifi', 'gps', 'bluetooth', 'connect_fort', 'jack_phone', 'other_connect'];
+    protected $fillable = ['network_mobile', 'sim', 'wifi', 'gps', 'bluetooth',
+    'connect_fort', 'jack_phone', 'other_connect'];
 
     public function products()
     {
@@ -20,4 +21,3 @@ class Connect extends Model
         return $this->belongsTo('App\Product');
     }
 }
-

@@ -20,4 +20,3 @@ class Utility extends Model
         return $this->belongsTo('App\Product');
     }
 }
-

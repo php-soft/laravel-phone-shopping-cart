@@ -8,7 +8,8 @@ use App\Product;
 class Manufactory extends Model
 {
     protected $table = 'manufactories';
-    protected $fillable = ['name', 'slug', 'phonenumber', 'address', 'email', 'image', 'description', 'location', 'status'];
+    protected $fillable = ['name', 'slug', 'phonenumber', 'address', 'email',
+    'image', 'description', 'location', 'status'];
 
     public function products()
     {
