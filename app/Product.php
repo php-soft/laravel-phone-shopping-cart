@@ -10,9 +10,9 @@ class Product extends Model
 {
     protected $table = 'products';
     protected $fillable = 
-    ['name', 'slug', 'price', 'description', 'image', 'category_id', 
-    'factory_id', 'tophot', 'warranty_moth', 'status', 'back_camera_id', 
-    'front_camera_id', 'battery_id', 'connect_id', 'design_id', 'opera_system_id', 
+    ['name', 'slug', 'price', 'description', 'image', 'category_id',
+    'factory_id', 'tophot', 'warranty_moth', 'status', 'back_camera_id',
+    'front_camera_id', 'battery_id', 'connect_id', 'design_id', 'opera_system_id',
     'screen_id',  'utility_id'];
 
     public function frontcameras()
