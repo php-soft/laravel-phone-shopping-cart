@@ -12,8 +12,8 @@ class MemorySeeder extends Seeder
     public function run()
     {
         DB::table('memories')->insert([
-            ['name' => "SamSung"],
-            ['name' => "Iphone"],
+            ['ram' => "6", 'rom' => "64", 'available_memory' => "50", 'external_memory_card' => "Hỗ trợ thẻ nhớ mở rộng lên đến 256gb"],
+            ['ram' => "3", 'rom' => "128", 'available_memory' => "110", 'external_memory_card' => "Hỗ trợ thẻ nhớ mở rộng lên đến 256gb"],
         ]);
     }
 }
