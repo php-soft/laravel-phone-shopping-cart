@@ -19,5 +19,4 @@ class Screen extends Model
     {
         return $this->belongsTo('App\Product');
     }
-
 }

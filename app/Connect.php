@@ -20,3 +20,4 @@ class Connect extends Model
         return $this->belongsTo('App\Product');
     }
 }
+
