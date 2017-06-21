@@ -12,11 +12,9 @@
 */
 
 Route::get('/', function () {
-    return redirect('products');
+    return redirect('/home');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('products', 'ProductController@index')->middleware('auth');
