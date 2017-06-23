@@ -5,6 +5,14 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Front_Camera;
 use App\Back_Camera;
+use App\Screen;
+use App\Category;
+use App\Color;
+use App\Connect;
+use App\Design;
+use App\Manufactory;
+use App\Memory;
+
 
 class Product extends Model
 {
@@ -73,5 +81,30 @@ class Product extends Model
     public function battery()
     {
         return $this->belongsTo('App\Battery');
+    }
+
+    public function votes()
+    {
+        return $this->hasOne('App\Vote');
+    }
+
+    public function vote()
+    {
+        return $this->belongsTo('App\Vote');
+    }
+
+    public function screens()
+    {
+        return $this->hasOne('App\Screen');
+    }
+
+    public function screen()
+    {
+        return $this->belongsTo('App\Screen');
+    }
+
+    public function color()
+    {
+        return $this->belongsTo('App\Color');
     }
 }
