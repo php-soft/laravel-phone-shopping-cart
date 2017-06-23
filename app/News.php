@@ -10,12 +10,12 @@ class News extends Model
     protected $fillable = [
         'title', 'slug', 'list_new_id', 'description', 'content', 'image'
     ];
-   	public function listNew()
+    public function listNew()
     {
-    	return $this->belongsTo('App\ListNew');
+        return $this->belongsTo('App\ListNew');
     }
     public function user()
     {
-    	return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 }
