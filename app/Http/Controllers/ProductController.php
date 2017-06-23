@@ -14,6 +14,6 @@ class ProductController extends Controller
         $product_id = Product::where('slug', $slug)->pluck('id');
         $product=Product::where('id', $product_id)->get();
         //dd($product);
-        return view('products.detail')->with('product', $product);   
+        return view('products.detail')->with('product', $product);
     }
 }
