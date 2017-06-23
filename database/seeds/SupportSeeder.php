@@ -12,8 +12,8 @@ class SupportSeeder extends Seeder
     public function run()
     {
         DB::table('supports')->insert([
-            ['employee_id' => "1", 'name' => "Lê Công Viên", 'email' => "lecongvien@gmail.com", 'phonenumber' => "0123456789", 'description' => "abc", 'vote' => "5"],
-            ['employee_id' => "2", 'name' => "Lê Đức Thiện", 'email' => "leducthien@gmail.com", 'phonenumber' => "012345679", 'description' => "abc", 'vote' => "5"],
+            ['customer_id' => "3", 'name' => "Lê Công Viên", 'email' => "lecongvien@gmail.com", 'phonenumber' => "0123456789", 'description' => "abc"],
+            ['customer_id' => "4", 'name' => "Lê Đức Thiện", 'email' => "leducthien@gmail.com", 'phonenumber' => "012345679", 'description' => "abc"],
         ]);
     }
 }
