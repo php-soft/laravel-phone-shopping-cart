@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth']], function (){
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/orders', 'OrderController@index')->name('adminOrders');
     Route::get('/orders/edit/{order_id}', 'OrderController@edit')->name('adminEditOrder');
     Route::put('/orders/edit/{order_id}', 'OrderController@update')->name('adminUpdateOrder');
