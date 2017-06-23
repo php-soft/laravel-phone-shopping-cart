@@ -13,7 +13,6 @@ use App\Design;
 use App\Manufactory;
 use App\Memory;
 
-
 class Product extends Model
 {
     protected $table = 'products';
