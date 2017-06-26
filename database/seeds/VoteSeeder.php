@@ -12,8 +12,11 @@ class VoteSeeder extends Seeder
     public function run()
     {
         DB::table('votes')->insert([
-            ['product_id' => "1", 'star' => "5", 'comment' => "Sản phẩm tốt"],
-            ['product_id' => "2", 'star' => "5", 'comment' => "Sản phẩm tuyệt vời"],
+            ['star' => "1"],
+            ['star' => "2"],
+            ['star' => "3"],
+            ['star' => "4"],
+            ['star' => "5"],
         ]);
     }
 }
