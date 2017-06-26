@@ -21,6 +21,7 @@ class CreateVoteProductsTable extends Migration
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('vote_id')->unsigned()->nullable();
             $table->foreign('vote_id')->references('id')->on('votes');
+            $table->string('comment', 255);
             $table->timestamps();
         });
     }
