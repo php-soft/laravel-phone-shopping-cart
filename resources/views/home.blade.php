@@ -5,7 +5,7 @@
     @foreach($data as $row)
         <div class="row">
             <div class="col-sm-6 col-md-4">
-                <a href="">
+                <a href="{{url('products/' .$row->slug)}}">
                     <div class="thumbnail">
                         <img class="img-responsive" src="{!!url('uploads/products/'.$row->image)!!}" alt="">
                         <div class="caption">
