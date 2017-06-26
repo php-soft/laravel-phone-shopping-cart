@@ -18,9 +18,13 @@ class CreateNewsTable extends Migration
             $table->integer('list_new_id')->unsigned()->nullable();
             $table->foreign('list_new_id')->references('id')->on('list_news');
             $table->string('title', 255);
+            $table->string('slug', 255);
             $table->string('description', 255);
             $table->string('image', 255);
-            $table->string('content', 255);
+            $table->mediumText('content');
+            $table->integer('view');
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

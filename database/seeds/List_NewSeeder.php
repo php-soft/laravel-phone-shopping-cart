@@ -12,8 +12,11 @@ class List_NewSeeder extends Seeder
     public function run()
     {
         DB::table('list_news')->insert([
-            ['name' => "Tin mới", 'slug' => "Tin-mới"],
-            ['name' => "Sản phẩm mới", 'slug' => "Sản-phẩm-mới"],
+            ['name' => "Sản phẩm mới", 'slug' => "san-pham"],
+            ['name' => "Đánh giá", 'slug' => "danh-gia"],
+            ['name' => "Công nghệ mới", 'slug' => "cong-nghe-moi"],
+            ['name' => "Mẹo hay", 'slug' => "meo-hay"],
+            ['name' => "Game - Ứng dụng", 'slug' => "game-ung-dung"],
         ]);
     }
 }
