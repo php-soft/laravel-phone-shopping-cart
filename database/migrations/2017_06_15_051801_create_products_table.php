@@ -47,6 +47,8 @@ class CreateProductsTable extends Migration
             $table->foreign('color_id')->references('id')->on('colors');
             $table->integer('memory_id')->unsigned()->nullable();
             $table->foreign('memory_id')->references('id')->on('memories');
+            $table->integer('vote_id')->unsigned()->nullable();
+            $table->foreign('vote_id')->references('id')->on('votes');
             $table->timestamps();
         });
     }
