@@ -11,7 +11,7 @@ class NewsController extends Controller
 {
     //
     public function index()
-    {   
+    {
         $news = News::all();
         return view('admin.news.index')->with('news', $news);
     }
@@ -40,8 +40,8 @@ class NewsController extends Controller
             ]);
         $news = new News;
         $news->title = $request->title;
-        $news->slug = str_slug($request->title,"-");
-        $news->list_new_id = $request->listNew;  
+        $news->slug = str_slug ($request->title,"-");
+        $news->list_new_id = $request->listNew;
         $news->description = $request->description;
         $news->content = $request->content;
         $news->view = 0;
@@ -58,7 +58,7 @@ class NewsController extends Controller
         return redirect('admin/news/create')->withSuccess('Thêm tin thành công');
     }
     public function edit($id)
-    {   
+    {
         $news = News::find($id);
         $listNews = ListNew::all();
         return view('admin.news.edit')->with('news', $news)->with('listNews', $listNews);
@@ -81,7 +81,7 @@ class NewsController extends Controller
             ]);
         $news = News::find($id);
         $news->title = $request->title;
-        $news->slug = str_slug($request->title,"-");
+        $news->slug = str_slug ($request->title,"-");
         $news->list_new_id = $request->listNew;
         $news->description = $request->description;
         $news->content = $request->content;
@@ -101,7 +101,7 @@ class NewsController extends Controller
         return redirect('admin/news/edit/'.$id)->withSuccess('Cập nhật tin thành công');
     }
     public function destroy($id)
-    {   
+    {
         $news = News::find($id);
         $news->delete();
         return redirect('admin/news')->withSuccess("Xóa tin thành công");
