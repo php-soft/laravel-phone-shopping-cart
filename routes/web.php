@@ -28,4 +28,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
     Route::get('/orders/edit/{order_id}', 'OrderController@edit')->name('adminEditOrder');
     Route::put('/orders/edit/{order_id}', 'OrderController@update')->name('adminUpdateOrder');
     Route::get('/orders/delete/{order_id}', 'OrderController@destroy')->name('adminDeleteOrder');
+
+    Route::get('news', 'NewsController@index');
+    Route::get('news/create', 'NewsController@create');
+    Route::post('news/index', 'NewsController@store');
+    Route::get('news/edit/{id}', 'NewsController@edit');
+    Route::post('news/edit/{id}', 'NewsController@update');
+    Route::get('news/delete/{id}', 'NewsController@destroy');
 });

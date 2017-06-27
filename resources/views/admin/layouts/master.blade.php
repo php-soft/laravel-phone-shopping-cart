@@ -28,6 +28,8 @@
 
     <!-- Custom Fonts -->
     <link href="{{url('admin_asset/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+        <!-- Ckeditor JavaScript -->
+    <script src="{{url('admin_asset/vendor/ckeditor/ckeditor.js')}}"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,9 +65,6 @@
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="{{url('admin_asset/vendor/metisMenu/metisMenu.min.js')}}"></script>
-
-    <!-- Ckeditor JavaScript -->
-    <script src="{{url('admin_asset/vendor/ckeditor/ckeditor.js')}}"></script>
 
     <!-- DataTables JavaScript -->
     <script src="{{url('admin_asset/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
