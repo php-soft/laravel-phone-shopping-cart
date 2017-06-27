@@ -15,8 +15,7 @@ class CreatePromotionsTable extends Migration
     {
         Schema::create('promotions', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('percent');
-            $table->decimal('max_price', 10, 0);
+            $table->string('name', 255);//các khuyến mãi đi kèm
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->timestamps();
