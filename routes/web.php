@@ -24,3 +24,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('products/{slug}', 'ProductController@indexByID');
+
+Route::get('/quickview', 'ProductController@quickview');
