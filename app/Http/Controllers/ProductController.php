@@ -34,8 +34,4 @@ class ProductController extends Controller
         $stores=Store::find($store_id);
         return view('products.detail')->with('products', $products)->with('count', $count)->with('avgvote', $avgvote)->with('stores', $stores)->with('promotions', $promotions);
     }
-
-    public function quickview() {
-        return view('products.quickview');
-    }
 }
