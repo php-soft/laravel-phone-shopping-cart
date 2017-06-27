@@ -15,11 +15,7 @@ class CreateVotesTable extends Migration
     {
         Schema::create('votes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('customer_id')->unsigned()->nullable();
-            $table->foreign('customer_id')->references('id')->on('users');
-            $table->integer('product_id')->unsigned()->nullable();
-            $table->foreign('product_id')->references('id')->on('products');
-            $table->integer('star');
+            $table->integer('star');//1 sản phẩm có nhiều lượt đánh giá nên tách thành 2 table votes and vote_products
             $table->string('comment', 255);
             $table->timestamps();
         });
