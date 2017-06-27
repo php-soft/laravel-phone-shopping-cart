@@ -22,11 +22,9 @@ class ProductController extends Controller
         $products=Product::find($product_id);
         $count=VoteProduct::where('product_id', $product_id)->count();
         $vote=VoteProduct::where('product_id', $product_id)->sum('vote_id');
-        if ($count==0)
-        {
+        if ($count==0) {
             $avgvote=0;
-        } else
-        {
+        } else {
             $avgvote=(float)round($vote/$count);
         }
         $promotion_id=PromotionProduct::where('product_id', $product_id)->pluck('promotion_id');
