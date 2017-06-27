@@ -40,7 +40,7 @@ class NewsController extends Controller
             ]);
         $news = new News;
         $news->title = $request->title;
-        $news->slug = str_slug ($request->title,"-");
+        $news->slug = str_slug($request->title, "-");
         $news->list_new_id = $request->listNew;
         $news->description = $request->description;
         $news->content = $request->content;
@@ -81,7 +81,7 @@ class NewsController extends Controller
             ]);
         $news = News::find($id);
         $news->title = $request->title;
-        $news->slug = str_slug ($request->title,"-");
+        $news->slug = str_slug($request->title, "-");
         $news->list_new_id = $request->listNew;
         $news->description = $request->description;
         $news->content = $request->content;
