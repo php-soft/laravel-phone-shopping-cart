@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-use App\Front_Camera;
-use App\Back_Camera;
 use Auth;
 use DB;
 
@@ -28,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $datas = Product::all();
-        return view('home')->with('data', $datas);
+        $products = Product::all();
+        return view('home')->with('products', $products);
     }
 }
