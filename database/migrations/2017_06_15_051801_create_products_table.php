@@ -13,41 +13,30 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        chema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 255);
-            $table->string('slug', 255);
-            $table->decimal('price', 10, 0);
-            $table->string('description', 255);
-            $table->string('image', 255);
-            $table->integer('tophot');
-            $table->integer('warranty_moth');
-            $table->string('status', 255);
-            $table->integer('category_id')->unsigned()->nullable();
-            $table->foreign('category_id')->references('id')->on('categories');
-            $table->integer('factory_id')->unsigned()->nullable();
-            $table->foreign('factory_id')->references('id')->on('manufactories');
-            $table->integer('back_camera_id')->unsigned()->nullable();
-            $table->foreign('back_camera_id')->references('id')->on('back_cameras');
-            $table->integer('front_camera_id')->unsigned()->nullable();
-            $table->foreign('front_camera_id')->references('id')->on('front_cameras');
-            $table->integer('battery_id')->unsigned()->nullable();
-            $table->foreign('battery_id')->references('id')->on('batteries');
-            $table->integer('connect_id')->unsigned()->nullable();
-            $table->foreign('connect_id')->references('id')->on('connects');
-            $table->integer('design_id')->unsigned()->nullable();
-            $table->foreign('design_id')->references('id')->on('designs');
-            $table->integer('opera_system_id')->unsigned()->nullable();
-            $table->foreign('opera_system_id')->references('id')->on('opera_systems');
-            $table->integer('screen_id')->unsigned()->nullable();
-            $table->foreign('screen_id')->references('id')->on('screens');
-            $table->integer('utility_id')->unsigned()->nullable();
-            $table->foreign('utility_id')->references('id')->on('utilities');
-            $table->integer('color_id')->unsigned()->nullable();
-            $table->foreign('color_id')->references('id')->on('colors');
-            $table->integer('memory_id')->unsigned()->nullable();
-            $table->foreign('memory_id')->references('id')->on('memories');
+            $table->integer('customer_id')->unsigned()->nullable();
+            $table->foreign('customer_id')->references('id')->on('users');
+            $table->integer('employee_id')->unsigned()->nullable();
+            $table->foreign('employee_id')->references('id')->on('users');
+            $table->integer('store_id')->unsigned()->nullable();
+            $table->foreign('store_id')->references('id')->on('stores');
+            $table->integer('payment_id')->unsigned()->nullable();
+            $table->foreign('payment_id')->references('id')->on('payments');
+            $table->integer('voucher_id')->unsigned()->nullable();
+            $table->foreign('voucher_id')->references('id')->on('vouchers');
+            $table->integer('status_id')->unsigned()->nullable();
+            $table->foreign('status_id')->references('id')->on('statuses');
+            $table->string('shipping_name', 255);
+            $table->string('shipping_address', 255);
+            $table->string('shipping_phone', 255);
+            $table->string('shipping_email', 255);
+            $table->string('bank', 255);
+            $table->string('payment_name', 255);
+            $table->string('payment_code', 255);
+            $table->decimal('total', 10, 0);
             $table->timestamps();
+            $table->dateTime('complete_at');
         });
     }
 
