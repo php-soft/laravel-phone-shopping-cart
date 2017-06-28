@@ -74,22 +74,27 @@ class Product extends Model
     {
         return $this->belongsTo('App\Battery');
     }
-     public function order_detail(){
-        return $this->hasMany('App\Order_Detail','product_id','id');
+    public function orderDetail()
+    {
+        return $this->hasMany('App\Order_Detail', 'product_id','id');
     }
-    public function color(){
-        return $this->belongsTo('App\Color','color_id','id');
+    public function color()
+    {
+        return $this->belongsTo('App\Color', 'color_id', 'id');
     }
     //thiện
-    public function promotions(){
+    public function promotions()
+    {
         return $this->belongsToMany('App\Promotion', 'promotion_products', 'product_id', 'promotion_id');
     }   
-    public static function getProduct($slug){
-        $product=Product::where('slug',$slug)->first();
+    public static function getProduct($slug)
+    {
+        $product=Product::where('slug', $slug)->first();
         return $product;
     }
-    public static function getProductID($slug){
-        $product_id=Product::where('slug',$slug)->pluck('id');
+    public static function getProductID($slug)
+    {
+        $product_id=Product::where('slug', $slug)->pluck('id');
         return $product_id;
     }
 }
