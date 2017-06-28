@@ -13,8 +13,7 @@ class CartController extends Controller
     {
         if ($stt = 0) {
             return view('cart');
-        } 
-        else {
+        }else {
             $products = Product::all();
             $content = Cart::content();
             $total = Cart::total();
