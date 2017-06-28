@@ -9,11 +9,11 @@ use Session;
 
 class CartController extends Controller
 {
-    public function index ()
+    public function index()
     {
         if ($stt = 0) {
-            return view('cart'); 
-        } 
+            return view('cart');
+        }
         else {
             $products = Product::all();
             $content = Cart::content();
@@ -22,20 +22,20 @@ class CartController extends Controller
             $qtysp = Cart::content()->count();
             $subtotal = Cart::subtotal();
             return view('pages.cart', compact('qtysp'), compact('subtotal'))->with('products', $products)
-                ->with('content', $content)->with('total', $total)->with('qty', $qty);     
-        }      
+                ->with('content', $content)->with('total', $total)->with('qty', $qty);
+        }
     }
 
-     public function getAddtoCart ($id)
-     {
-            $stt = 1;
-            $product = Product::find($id);
-            $insert = Cart::add(['id' => $product->id, 'name' => $product->name, 'qty' => 1,
-             'price' => $product->price, 'image' =>  $product->image]);
-            return redirect()->route('home');
+    public function getAddtoCart($id)
+    {
+        $stt = 1;
+        $product = Product::find($id);
+        $insert = Cart::add(['id' => $product->id, 'name' => $product->name, 'qty' => 1,
+         'price' => $product->price, 'image' =>  $product->image]);
+        return redirect()->route('home');
     }
 
-    public function getCheckout ()
+    public function getCheckout()
     {
         $products = Product::all();
         $content = Cart::content();
@@ -47,7 +47,7 @@ class CartController extends Controller
         ->with('total', $total)->with('qty', $qty);
     }
 
-    public function getUpdateQtyCart ($id)
+    public function getUpdateQtyCart($id)
     {
         $rowid = Cart::content()->where('id', $id)->pluck('rowId')->first();
         $qty = Cart::content()->where('id', $id)->pluck('qty')->first();
@@ -56,7 +56,7 @@ class CartController extends Controller
         return redirect()->back();
     }
 
-    public function getDeleteQtyCart ($id)
+    public function getDeleteQtyCart($id)
     {
         $rowid = Cart::content()->where('id', $id)->pluck('rowId')->first();
         $qty = Cart::content()->where('id', $id)->pluck('qty')->first();
@@ -65,7 +65,7 @@ class CartController extends Controller
         return redirect()->back();
     }
 
-    public function getDeleteProductCart ($id)
+    public function getDeleteProductCart($id)
     {
         $rowid = Cart::content()->where('id', $id)->pluck('rowId')->first();
         Cart::remove($rowid);
@@ -81,7 +81,7 @@ class CartController extends Controller
         return redirect()->back();
     }
 
-    public function getUpdateCart ($id)
+    public function getUpdateCart($id)
     {
         // $qty=Input::get('qty');
         // dd($qty);
