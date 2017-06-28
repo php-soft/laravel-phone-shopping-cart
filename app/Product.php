@@ -76,7 +76,7 @@ class Product extends Model
     }
     public function orderDetail()
     {
-        return $this->hasMany('App\Order_Detail', 'product_id','id');
+        return $this->hasMany('App\Order_Detail', 'product_id', 'id');
     }
     public function color()
     {
@@ -86,7 +86,7 @@ class Product extends Model
     public function promotions()
     {
         return $this->belongsToMany('App\Promotion', 'promotion_products', 'product_id', 'promotion_id');
-    }   
+    }
     public static function getProduct($slug)
     {
         $product=Product::where('slug', $slug)->first();
