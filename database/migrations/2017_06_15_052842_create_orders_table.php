@@ -25,6 +25,8 @@ class CreateOrdersTable extends Migration
             $table->foreign('payment_id')->references('id')->on('payments');
             $table->integer('voucher_id')->unsigned()->nullable();
             $table->foreign('voucher_id')->references('id')->on('vouchers');
+            $table->integer('status_id')->unsigned()->nullable();
+            $table->foreign('status_id')->references('id')->on('statuses');
             $table->string('shipping_name', 255);
             $table->string('shipping_address', 255);
             $table->string('shipping_phone', 255);
@@ -32,8 +34,6 @@ class CreateOrdersTable extends Migration
             $table->string('bank', 255);
             $table->string('payment_name', 255);
             $table->string('payment_code', 255);
-            $table->string('password', 255);
-            $table->string('status', 255);
             $table->decimal('total', 10, 0);
             $table->timestamps();
             $table->dateTime('complete_at');
