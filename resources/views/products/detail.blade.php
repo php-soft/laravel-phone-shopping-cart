@@ -333,7 +333,124 @@
 			</div>
 		</div>
 		<hr><!-- end detail product info -->
-		
+		<div id="detail-product-news">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-8">
+					<div class="col-xs-12 col-sm-12 col-md-12 product-rate">
+						<input type="checkbox" class="read-more-state" id="post-2" />
+						<ul class="read-more-wrap">
+							<h3>Đánh giá chi tiết sản phẩm</h3>
+							<p>{!!$product->description!!} Màu đỏ là trên chiếc iPhone 7 Plus Red 128GB là màu lần đầu tiên được Apple mang lên những chiếc iPhone của mình. Theo đó thì những chiếc iPhone mới sẽ có mặt lưng được làm từ nhôm nguyên khối, được sơn lên lớp sơn màu đỏ rất nổi bật và bắt mắt. Đáng tiếc là phần mặt trước của máy vẫn giữ màu trắng quen thuộc nên sẽ cho bạn đôi chút cảm thấy hụt hẫng.
+				            Màu đỏ là trên chiếc iPhone 7 Plus Red 128GB là màu lần đầu tiên được Apple mang lên những chiếc iPhone của mình. Theo đó thì những chiếc iPhone mới sẽ có mặt lưng được làm từ nhôm nguyên khối, được sơn lên lớp sơn màu đỏ rất nổi bật và bắt mắt. Đáng tiếc là phần mặt trước của máy vẫn giữ màu trắng quen thuộc nên sẽ cho bạn đôi chút cảm thấy hụt hẫng.
+				            Màu đỏ là trên chiếc iPhone 7 Plus Red 128GB là màu lần đầu tiên được Apple mang lên những chiếc iPhone của mình. Theo đó thì những chiếc iPhone mới sẽ có mặt lưng được làm từ nhôm nguyên khối, được sơn lên lớp sơn màu đỏ rất nổi bật và bắt mắt. Đáng tiếc là phần mặt trước của máy vẫn giữ màu trắng quen thuộc nên sẽ cho bạn đôi chút cảm thấy hụt hẫng.
+				            Màu đỏ là trên chiếc iPhone 7 Plus Red 128GB là màu lần đầu tiên được Apple mang lên những chiếc iPhone của mình. Theo đó thì những chiếc iPhone mới sẽ có mặt lưng được làm từ nhôm nguyên khối, được sơn lên lớp sơn màu đỏ rất nổi bật và bắt mắt. Đáng tiếc là phần mặt trước của máy vẫn giữ màu trắng quen thuộc nên sẽ cho bạn đôi chút cảm thấy hụt hẫng. <br>
+				            <img style="height: 100px; width: 100px;" class="read-more-target" src="{!!$product->image!!}" alt="{!!$product->name!!}">
+				            <p class="read-more-target">{!!$product->description!!} Màu đỏ là trên chiếc iPhone 7 Plus Red 128GB là màu lần đầu tiên được Apple mang lên những chiếc iPhone của mình. Theo đó thì những chiếc iPhone</p>
+				            </p>
+						</ul>
+						<label for="post-2" class="read-more-trigger"></label>
+					</div>
+					<!-- end product detail rate -->				
+			        <div class="col-xs-12 col-sm-12 col-md-12 product-vote">
+			        	<hr>
+			        	<h3>1 đánh giá {!! $product->name !!}</h3>
+			        	<h5><strong>Lê Công Viên</strong></h5>
+			            <div>
+			                <form style="margin-right: 660px;">
+			                    <input class="star star-5" id="star-5" type="radio" name="star"/>
+			                    <label class="star star-5" for="star-5"></label>
+			                    <input class="star star-4" id="star-4" type="radio" name="star"/>
+			                    <label class="star star-4" for="star-4"></label>
+			                    <input class="star star-3" id="star-3" type="radio" name="star"/>
+			                    <label class="star star-3" for="star-3"></label>
+			                    <input class="star star-2" id="star-2" type="radio" name="star"/>
+			                    <label class="star star-2" for="star-2"></label>
+			                    <input class="star star-1" id="star-1" type="radio" name="star"/>
+			                    <label class="star star-1" for="star-1"></label>
+			                </form>
+			                <p>Mua được 1 tháng thấy tất cả đều tốt camare trước đẹp, sau hơi tệ. Vân tay nhạy, chơi game nặn được. Có điều hơi ngốn pin và nóng máy Máy đẹp có điều phải màu đen ra cùng lúc thì OK, lỡ mua màu vàng mún đổi cũng không được nữa hơi bùn. Nhân viên TGDĐ nhiệt tình chu đáo rất hài lòng cảm ơn anh chị.</p>
+			            </div>
+			            <hr>
+			        </div>
+			        <!-- end product vote -->
+			        <div class="col-xs-12 col-sm-12 col-md-12 product-comment">
+			        	<div class="widget-area no-padding blank">
+	                        <div class="status-upload">
+	                            <form>
+	                                <textarea style="width: 750px; height: 120px; max-width: 750px; max-height: 200px;"></textarea>
+	                                <a href="" title="" class="btn btn-primary pull-right" style="font-size: 13px;">Gửi</a>
+	                            </form>
+	                        </div><!-- Status Upload  -->
+	                    </div><!-- Widget Area -->
+			        </div>
+			        <!-- end product comment -->
+			    </div>    
+				<div class="col-xs-12 col-sm-12 col-md-4">	
+			        <div class="col-xs-12 col-sm-12 col-md-12 product-news">
+						<h2 style="padding-left: 20px;"><small>Tin tức mới</small></h2><hr>
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
+			                <div class="bt">
+			                    <div class="image-m pull-left">
+			                        <a href=""><img style="height: 100px; width: 100px;" class="img-responsive" src="{!!$product->image!!}" alt="{!!$product->name!!}"></a>
+			                    </div>
+			                </div> <!-- /div bt -->
+			                <div class="ct">
+			                    <a href="" title="Chi tiết">
+			                        <p>
+			                            {!!$product->description!!} Màu đỏ là trên chiếc iPhone 7 Plus Red 128GB là màu lần đầu tiên được Apple mang lên những chiếc iPhone của mình. Theo đó thì những chiếc iPhone
+			                        </p>
+			                    </a>
+			                </div>
+			            </div>
+			            <a href="" class="pull-right compare">Đọc thêm tin tức</a>
+					</div>
+					<!-- end product news -->
+					<div class="col-xs-12 col-sm-12 col-md-12 product-similar">
+			            <h2 style="padding-left: 20px;"><small>Sản phẩm tương tự</small></h2><hr>     
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
+			                <div class="bt">
+			                    <div class="image-m pull-left">
+			                        <a href=""><img style="height: 150px; width: 110px;" class="img-responsive" src="{!!$product->image!!}" alt="{!!$product->name!!}"></a>
+			                    </div>
+			                </div> <!-- /div bt -->
+			                <div class="ct">
+			                    <h4>{!! $product->name !!}</h4>
+			                    <h4>{!! $product->price !!} đ</h4>
+			                    <a href="{!!url('mobile/'.$product->id.'-'.$product->slug)!!}" title="Chi tiết">
+			                        <ul type="none">
+			                            <li><strong>Màn Hình</strong> :{!!$product->screen->tech_screen!!}</li>
+			                            <li><strong>Camera</strong> :{!!$product->backCamera->resolution!!} MP</li>
+			                            <li><strong>Pin</strong> :{!!$product->battery->battery_capacity!!} mAh</li>
+			                        </ul>
+			                    </a>
+			                </div>
+			                <a href="" class="pull-right compare">So sánh chi tiết </a>
+			            </div>
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
+			                <div class="bt">
+			                    <div class="image-m pull-left">
+			                        <a href=""><img style="height: 150px; width: 110px;" class="img-responsive" src="{!!$product->image!!}" alt="{!!$product->name!!}"></a>
+			                    </div>
+			                </div> <!-- /div bt -->
+			                <div class="ct">
+			                    <h4>{!! $product->name !!}</h4>
+			                    <h4>{!! $product->price !!} đ</h4>
+			                    <a href="{!!url('mobile/'.$product->id.'-'.$product->slug)!!}" title="Chi tiết">
+			                        <ul type="none">
+			                            <li><strong>Màn Hình</strong> :{!!$product->screen->tech_screen!!}</li>
+			                            <li><strong>Camera</strong> :{!!$product->backCamera->resolution!!} MP</li>
+			                            <li><strong>Pin</strong> :{!!$product->battery->battery_capacity!!} mAh</li>
+			                        </ul>
+			                    </a>
+			                </div>
+			                <a href="" class="pull-right compare">So sánh chi tiết </a>
+			            </div>
+			        </div>
+			        <!-- end product similar -->
+			    </div>    
+			</div>
+		</div>
+		<hr><!-- end detail product vote, news of product and similar product -->
 	@endforeach
 </div>
 @stop
