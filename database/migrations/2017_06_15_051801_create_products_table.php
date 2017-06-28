@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->decimal('price', 10, 0);
             $table->string('description', 255);
             $table->string('image', 255);
+            $table->string('accessory', 255);
             $table->integer('tophot');
             $table->integer('warranty_moth');
             $table->string('status', 255);
