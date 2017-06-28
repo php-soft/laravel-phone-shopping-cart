@@ -33,7 +33,6 @@ class CreateOrdersTable extends Migration
             $table->string('payment_name', 255);
             $table->string('payment_code', 255);
             $table->string('password', 255);
-            $table->string('status', 255);
             $table->decimal('total', 10, 0);
             $table->timestamps();
             $table->dateTime('complete_at');
